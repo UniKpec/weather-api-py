@@ -1,6 +1,5 @@
 import requests
 from tkinter import *
-from tkinter import ttk
 import datetime
 
 
@@ -35,12 +34,12 @@ hour = instant_time.strftime("%H")
 minu = instant_time.strftime("%M")
 
 
-weather_api_title = ttk.Label(weather_api,text=city[1],font=("Helvetica", "18", "bold"))
-weather_api_temperature = ttk.Label(weather_api,text=f"{city[1]} City Temperature(°C)",font=("Helvetica","14"))
-weather_api_temperature_number = ttk.Label(weather_api,text=weather_api_json["current"]["temperature_2m"],font=("Helvetica","14"))
-weather_api_time = ttk.Label(weather_api,text="Time and Date",font=("Helvetica","14"))
-weather_api_time_number = ttk.Label(weather_api,text=time[0]+"-"+time[1],font=("Helvetivca","14"))
-weather_api_instant_time = ttk.Label(weather_api,text=f"{hour}:{minu}",font=("Helvetica","12"))
+weather_api_title = Label(weather_api,text=city[1],font=("Helvetica", "18", "bold"))
+weather_api_temperature = Label(weather_api,text=f"{city[1]} City Temperature(°C)",font=("Helvetica","14"))
+weather_api_temperature_number = Label(weather_api,text=weather_api_json["current"]["temperature_2m"],font=("Helvetica","14"))
+weather_api_time = Label(weather_api,text="Time and Date",font=("Helvetica","14"))
+weather_api_time_number = Label(weather_api,text=time[0]+"-"+time[1],font=("Helvetivca","14"))
+weather_api_instant_time = Label(weather_api,text=f"{hour}:{minu}",font=("Helvetica","12"))
 
 
 #Place a widget
